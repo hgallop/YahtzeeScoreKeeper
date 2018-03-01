@@ -5,333 +5,352 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context="com.example.android.yahtzeescorekeeper.MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context="com.example.android.yahtzeescorekeeper.MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        tools:context="com.example.android.yahtzeescorekeeper.MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/upper"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/aces"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upper" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/twos"/>
+            <TextView
+                android:id="@+id/aces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aces" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/threes"/>
+            <TextView
+                android:id="@+id/twos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/twos" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fours"/>
+            <TextView
+                android:id="@+id/threes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/threes" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fives"/>
+            <TextView
+                android:id="@+id/fours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fours" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sixes"/>
+            <TextView
+                android:id="@+id/fives"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fives" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bonus"/>
+            <TextView
+                android:id="@+id/sixes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sixes" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lower"/>
+            <TextView
+                android:id="@+id/bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bonus" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/threeOfaKind"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lower" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fourOfaKind"/>
+            <TextView
+                android:id="@+id/three_of_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/threeOfaKind" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fullHouse"/>
+            <TextView
+                android:id="@+id/four_of_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fourOfaKind" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/smallStraight"/>
+            <TextView
+                android:id="@+id/full_house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fullHouse" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/largeStraight"/>
+            <TextView
+                android:id="@+id/sm_straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/smallStraight" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/yahtzee"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/chance"/>
+            <TextView
+                android:id="@+id/lg_straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/largeStraight" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/yahtzeeBonus"/>
+            <TextView
+                android:id="@+id/yahtzee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yahtzee" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/grandTotal"/>
+            <TextView
+                android:id="@+id/chance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chance" />
+
+            <TextView
+                android:id="@+id/yahtzee_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yahtzeeBonus" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grandTotal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/player_1" />
+
+            <TextView
+                android:id="@+id/player1_aces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_twos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_threes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_fours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_fives"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_sixes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/player1_three_of_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_four_of_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_full_house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_sm_straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_lg_straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_yahtzee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_chance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_yahtzee_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player1_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/player_2" />
+
+            <TextView
+                android:id="@+id/player2_aces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_twos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_threes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_fours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_fives"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_sixes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/player2_three_of_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_four_of_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_full_house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_sm_straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_lg_straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_yahtzee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_chance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_yahtzee_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <TextView
+                android:id="@+id/player2_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/player_1"/>
-
-        <TextView
-            android:id="@+id/player1_aces"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_twos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_threes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_fours"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_fives"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_sixes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_bonus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="14dp"
-            android:background="@color/colorPrimary"/>
-
-        <TextView
-            android:id="@+id/player1_three_of_kind"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_four_of_kind"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_full_house"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_sm_straight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_lg_straight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_yahtzee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_chance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_yahtzee_bonus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player1_total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/player_2"/>
-
-        <TextView
-            android:id="@+id/player2_aces"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_twos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_threes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_fours"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_fives"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_sixes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_bonus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="14dp"
-            android:background="@color/colorPrimary"/>
-
-
-        <TextView
-            android:id="@+id/player2_three_of_kind"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_four_of_kind"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_full_house"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_sm_straight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_lg_straight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_yahtzee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_chance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_yahtzee_bonus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:id="@+id/player2_total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-    </LinearLayout>
-</LinearLayout>
 </ScrollView>

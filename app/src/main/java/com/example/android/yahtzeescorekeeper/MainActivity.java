@@ -6,6 +6,22 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView aces;
+    TextView twos;
+    TextView threes;
+    TextView fours;
+    TextView fives;
+    TextView sixes;
+    TextView bonus;
+    TextView threeOfKind;
+    TextView fourOfKind;
+    TextView fullHouse;
+    TextView smStraight;
+    TextView lgStraight;
+    TextView yahtzee;
+    TextView chance;
+    TextView yahtzeeBonus;
+    TextView total;
     TextView player1Aces;
     TextView player1Twos;
     TextView player1Threes;
@@ -45,6 +61,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        aces = findViewById(R.id.aces);
+        twos = findViewById(R.id.twos);
+        threes = findViewById(R.id.threes);
+        fours = findViewById(R.id.fours);
+        fives = findViewById(R.id.fives);
+        sixes = findViewById(R.id.sixes);
+        bonus = findViewById(R.id.bonus);
+        threeOfKind = findViewById(R.id.three_of_kind);
+        fourOfKind = findViewById(R.id.four_of_kind);
+        fullHouse = findViewById(R.id.full_house);
+        smStraight = findViewById(R.id.sm_straight);
+        lgStraight = findViewById(R.id.lg_straight);
+        yahtzee = findViewById(R.id.yahtzee);
+        chance = findViewById(R.id.chance);
+        yahtzeeBonus = findViewById(R.id.yahtzee_bonus);
+        total = findViewById(R.id.total);
         player1Aces = findViewById(R.id.player1_aces);
         player1Twos = findViewById(R.id.player1_twos);
         player1Threes = findViewById(R.id.player1_threes);
