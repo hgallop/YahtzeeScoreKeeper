@@ -119,85 +119,102 @@
             android:text="@string/player_1"/>
 
         <TextView
+            android:id="@+id/player1_aces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player1_twos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player1_threes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player1_fours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player1_fives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player1_sixes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player1_bonus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
+            android:layout_height="14dp"
+            android:background="@color/colorPrimary"/>
 
         <TextView
+            android:id="@+id/player1_three_of_kind"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_four_of_kind"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_full_house"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_sm_straight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_lg_straight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_yahtzee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_chance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player1_yahtzee_bonus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
+            android:id="@+id/player1_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
@@ -215,85 +232,103 @@
             android:text="@string/player_2"/>
 
         <TextView
+            android:id="@+id/player2_aces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player2_twos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player2_threes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player2_fours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player2_fives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player2_sixes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none"/>
+
+        <TextView
+            android:id="@+id/player2_bonus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
+            android:layout_height="14dp"
+            android:background="@color/colorPrimary"/>
+
 
         <TextView
+            android:id="@+id/player2_three_of_kind"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_four_of_kind"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_full_house"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_sm_straight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_lg_straight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_yahtzee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_chance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
+            android:id="@+id/player2_yahtzee_bonus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/none"/>
-
-        <TextView
+            android:id="@+id/player2_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/none"/>
