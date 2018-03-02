@@ -23,4 +23,8 @@
     <string name="none">0</string>
     <string name="player_2">Player 2</string>
     <string name="player_1">Player 1</string>
+
+    <string name="choose_player">Choose Player</string>
+    <string name="enter_score">Enter Score</string>
+    <string name="ok">OK</string>
 </resources>

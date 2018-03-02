@@ -8,6 +8,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int scoreType = 0;
+    String scoreUpdate;
+    int scoreSet = 0;
+    int playerOneScore = 0;
+    int playerTwoScore = 0;
+    int scoreInt = 0;
+
+    boolean playerOne;
+    boolean playerTwo;
+
     TextView aces;
     TextView twos;
     TextView threes;
@@ -112,127 +122,569 @@ public class MainActivity extends AppCompatActivity {
         player2YahtzeeBonus = findViewById(R.id.player2_yahtzee_bonus);
         player2Total = findViewById(R.id.player2_total);
 
-        aces.setOnClickListener(new View.OnClickListener(){
+        aces.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 1;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                startActivity(intent);
             }
         });
 
-        twos.setOnClickListener(new View.OnClickListener(){
+        twos.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 2;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        threes.setOnClickListener(new View.OnClickListener(){
+        threes.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 3;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        fours.setOnClickListener(new View.OnClickListener(){
+        fours.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 4;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        fives.setOnClickListener(new View.OnClickListener(){
+        fives.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 5;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        sixes.setOnClickListener(new View.OnClickListener(){
+        sixes.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 6;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        bonus.setOnClickListener(new View.OnClickListener(){
+        threeOfKind.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 7;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        threeOfKind.setOnClickListener(new View.OnClickListener(){
+        fourOfKind.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 8;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        fourOfKind.setOnClickListener(new View.OnClickListener(){
+        fullHouse.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 9;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        fullHouse.setOnClickListener(new View.OnClickListener(){
+        smStraight.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 10;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        smStraight.setOnClickListener(new View.OnClickListener(){
+        lgStraight.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 11;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        lgStraight.setOnClickListener(new View.OnClickListener(){
+        yahtzee.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 12;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        yahtzee.setOnClickListener(new View.OnClickListener(){
+        chance.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 13;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        chance.setOnClickListener(new View.OnClickListener(){
+        yahtzeeBonus.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                scoreType = 14;
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("scoreType", scoreType);
+                startActivity(intent);
             }
         });
 
-        yahtzeeBonus.setOnClickListener(new View.OnClickListener(){
+        Intent intent = getIntent();
+        if (intent != null) {
+            scoreUpdate = intent.getStringExtra("scoreUpdate");
+            scoreSet = intent.getIntExtra("scoreType", 0);
+            playerOne = intent.getBooleanExtra("playerOneScore", false);
+            playerTwo = intent.getBooleanExtra("playerTwoScore", false);
+        }
 
-            @Override
-            public void onClick(View view) {
+        switch (scoreSet) {
+            case 0:
+                break;
+            case 1:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if (playerOne) {
+                    displayPlayer1Aces(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if (playerTwo) {
+                    displayPlayer2Aces(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 2:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if (playerOne) {
+                    displayPlayer1Twos(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if (playerTwo) {
+                    displayPlayer2Twos(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+            case 3:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if (playerOne) {
+                    displayPlayer1Threes(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if (playerTwo) {
+                    displayPlayer2Threes(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 4:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1Fours(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2Fours(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 5:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1Fives(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2Fives(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 6:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1Sixes(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2Sixes(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 7:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1ThreeOfKind(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2ThreeOfKind(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 8:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1FourOfKind(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2FourOfKind(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 9:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1FullHouse(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2FullHouse(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 10:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1SmStraight(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2SmStraight(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 11:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1LgStraight(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2LgStraight(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 12:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1Yahtzee(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2Yahtzee(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 13:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1Chance(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2Chance(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+            case 14:
+                scoreInt = Integer.parseInt(scoreUpdate);
+                if(playerOne){
+                    displayPlayer1YahtzeeBonus(scoreInt);
+                    playerOneScore += scoreInt;
+                    displayPlayerOneScore(playerOneScore);
+                    playerOne = false;
+                    break;
+                }
+                if(playerTwo){
+                    displayPlayer2YahtzeeBonus(scoreInt);
+                    playerTwoScore += scoreInt;
+                    displayPlayerTwoScore(playerTwoScore);
+                    playerTwo = false;
+                    break;
+                }
+                break;
+        }
 
-            }
-        });
+
     }
 
+    private void displayPlayerOneScore(int number) {
+        String score = "" + number;
+        player1Total.setText(score);
+    }
 
+    private void displayPlayerTwoScore(int number) {
+        String score = "" + number;
+        player2Total.setText(score);
+    }
 
+    private void displayPlayer1Aces(int number) {
+        String score = "" + number;
+        player1Aces.setText(score);
+    }
+
+    private void displayPlayer2Aces(int number) {
+        String score = "" + number;
+        player2Aces.setText(score);
+    }
+
+    private void displayPlayer1Twos(int number) {
+        String score = "" + number;
+        player1Twos.setText(score);
+    }
+
+    private void displayPlayer2Twos(int number) {
+        String score = "" + number;
+        player2Twos.setText(score);
+    }
+
+    private void displayPlayer1Threes(int number) {
+        String score = "" + number;
+        player1Threes.setText(score);
+    }
+
+    private void displayPlayer2Threes(int number) {
+        String score = "" + number;
+        player2Threes.setText(score);
+    }
+
+    private void displayPlayer1Fours(int number) {
+        String score = "" + number;
+        player1Fours.setText(score);
+    }
+
+    private void displayPlayer2Fours(int number) {
+        String score = "" + number;
+        player2Fours.setText(score);
+    }
+
+    private void displayPlayer1Fives(int number) {
+        String score = "" + number;
+        player1Fives.setText(score);
+    }
+
+    private void displayPlayer2Fives(int number) {
+        String score = "" + number;
+        player2Fives.setText(score);
+    }
+
+    private void displayPlayer1Sixes(int number) {
+        String score = "" + number;
+        player1Sixes.setText(score);
+    }
+
+    private void displayPlayer2Sixes(int number) {
+        String score = "" + number;
+        player2Sixes.setText(score);
+    }
+
+    private void displayPlayer1Bonus(int number) {
+        String score = "" + number;
+        player1Bonus.setText(score);
+    }
+
+    private void displayPlayer2Bonus(int number) {
+        String score = "" + number;
+        player2Bonus.setText(score);
+    }
+
+    private void displayPlayer1ThreeOfKind(int number) {
+        String score = "" + number;
+        player13OfKind.setText(score);
+    }
+
+    private void displayPlayer2ThreeOfKind(int number) {
+        String score = "" + number;
+        player23OfKind.setText(score);
+    }
+
+    private void displayPlayer1FourOfKind(int number) {
+        String score = "" + number;
+        player14OfKind.setText(score);
+    }
+
+    private void displayPlayer2FourOfKind(int number) {
+        String score = "" + number;
+        player24OfKind.setText(score);
+    }
+
+    private void displayPlayer1FullHouse(int number) {
+        String score = "" + number;
+        player1FullHouse.setText(score);
+    }
+
+    private void displayPlayer2FullHouse(int number) {
+        String score = "" + number;
+        player2FullHouse.setText(score);
+    }
+
+    private void displayPlayer1SmStraight(int number) {
+        String score = "" + number;
+        player1SmStraight.setText(score);
+    }
+
+    private void displayPlayer2SmStraight(int number) {
+        String score = "" + number;
+        player2SmStraight.setText(score);
+    }
+
+    private void displayPlayer1LgStraight(int number) {
+        String score = "" + number;
+        player1LgStraight.setText(score);
+    }
+
+    private void displayPlayer2LgStraight(int number) {
+        String score = "" + number;
+        player2LgStraight.setText(score);
+    }
+
+    private void displayPlayer1Yahtzee(int number) {
+        String score = "" + number;
+        player1Yahtzee.setText(score);
+    }
+
+    private void displayPlayer2Yahtzee(int number) {
+        String score = "" + number;
+        player2Yahtzee.setText(score);
+    }
+
+    private void displayPlayer1Chance(int number) {
+        String score = "" + number;
+        player1Chance.setText(score);
+    }
+
+    private void displayPlayer2Chance(int number) {
+        String score = "" + number;
+        player2Chance.setText(score);
+    }
+
+    private void displayPlayer1YahtzeeBonus(int number) {
+        String score = "" + number;
+        player1Chance.setText(score);
+    }
+
+    private void displayPlayer2YahtzeeBonus(int number) {
+        String score = "" + number;
+        player2Chance.setText(score);
+    }
 }
